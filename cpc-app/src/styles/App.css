@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,17 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+header {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  height: 3em;
 }
+header nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0 1em;
+}
+
