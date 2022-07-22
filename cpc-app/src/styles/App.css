@@ -38,14 +38,58 @@
 } */
 
 header {
+  text-align: center;
+  font-size: 100px;
+}
+
+nav {
   background-color: green;
   display: flex;
   align-items: center;
   height: 3em;
 }
-header nav a {
+
+nav a {
   text-decoration: none;
   color: black;
   margin: 0 1em;
+  font-weight: bold;
 }
 
+form {
+  padding: 1.5rem 2rem;
+  text-align: left;
+}
+.form {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  max-width: 400px;
+}
+
+input {
+  border-bottom: 1px solid ivory;
+  margin: 1.5rem 0 0.5rem;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+label {
+  display: block;
+}
+
+button,
+input {
+  border: none;
+  font-size: 1rem;
+}
+
+#purchase-btn {
+  display: block;
+  margin: 10px;
+}
+/* 
+img {
+  width: 100%;
+  height: 450px;
+} */
