@@ -22,7 +22,7 @@ const Ticket = (props) => {
             <option value="Child">Child</option>
           </optgroup>
         </select>
-        <button type="submit">Purchase</button>
+        <button type="submit" id="purchase-btn">Purchase</button>
       </form>
     </div>
   )

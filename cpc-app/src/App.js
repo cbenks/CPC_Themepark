@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
 import Ticket from './components/Ticket'
+import Confirmation from './components/Confirmation'
 
 const BASE_URL = 'http://localhost:3001/api'
 
@@ -51,9 +52,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Header />
-      </header>
+      <header className="App-header">CPC THEMEPARK</header>
+      <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -64,6 +64,7 @@ function App() {
               <Ticket handleChange={handleChange} handleSubmit={handleSubmit} />
             }
           />
+          <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
       </main>
     </div>
