@@ -14,18 +14,22 @@ function App() {
   let [buyTicket, setBuyTicket] = useState({
     name: '',
     email: '',
+    cardNumber: '',
+    Zipcode: '',
+    CVV: '',
     ticketType: ''
   })
-  const [clients, setClients] = useState('')
 
-  // useEffect(() => {
-  //   const getClient = async () => {
-  //     const res = await axios.get(`${BASE_URL}/clients`)
-  //     console.log(res.data.clients)
-  //     //setClients(res.data.clients)
-  //   }
-  //   getClient()
-  // }, [])
+  const [client, setClients] = useState()
+
+  useEffect(() => {
+    const getClient = async () => {
+      const res = await axios.get(`${BASE_URL}/clients`)
+      console.log(res.data.clients)
+      //setClients(res.data.clients)
+    }
+    getClient()
+  }, [])
 
   const handleChange = (event) => {
     let clientInfo = {
@@ -36,13 +40,12 @@ function App() {
     console.log(event.target.value)
   }
 
-  const handleSubmission = (event) => {
-    event.preventDefault()
-    if (
-      buyTicket.name !== '' &&
-      buyTicket.email !== '' &&
-      buyTicket.ticketType !== ''
-    ) {
+  const handleSubmit = async (event) => {
+    //event.preventDefault()
+    try {
+      let res = await axios.post(`${BASE_URL}/clients`, buyTicket)
+    } catch (err) {
+      console.log(err)
     }
   }
 
@@ -57,7 +60,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route
             path="/tickets"
-            element={<Ticket handleChange={handleChange} />}
+            element={
+              <Ticket handleChange={handleChange} handleSubmit={handleSubmit} />
+            }
           />
         </Routes>
       </main>
