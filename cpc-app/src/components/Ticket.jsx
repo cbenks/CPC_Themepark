@@ -16,7 +16,6 @@ const Ticket = (props) => {
         <label htmlFor="age">Ticket Type: </label>
         <select name="ticketType" id="ticketType" onChange={props.handleChange}>
           <optgroup label="Choose Ticket Type">
-            <option value="selectType">Please select your ticket</option>
             <option value="Senior">Senior</option>
             <option value="Adult">Adult</option>
             <option value="Child">Child</option>

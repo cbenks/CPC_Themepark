@@ -36,14 +36,19 @@
     transform: rotate(360deg);
   }
 } */
+body {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
 
 header {
   text-align: center;
   font-size: 100px;
+  font-weight: 700;
+   
 }
 
 nav {
-  background-color: green;
+  background-color: dodgerblue;
   display: flex;
   align-items: center;
   height: 3em;
@@ -56,9 +61,10 @@ nav a {
   font-weight: bold;
 }
 
-form {
+/* form {
   padding: 1.5rem 2rem;
   text-align: left;
+  border-style: groove;
 }
 .form {
   text-align: center;
@@ -74,8 +80,14 @@ input {
   display: block;
 }
 
+input:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
 label {
   display: block;
+  font-weight: bold;
 }
 
 button,
@@ -84,12 +96,64 @@ input {
   font-size: 1rem;
 }
 
+button {
+  background-color: #1e90ff;
+  padding: 0.5rem 0.7rem;
+  border-radius: 15px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
+}
+
 #purchase-btn {
   display: block;
-  margin: 10px;
+  margin: 10px; }*/
+
+form{
+  background: white;
+  padding: 3em;
+  height: 320px;
+  border-radius: 20px;
+  border-left: 1px solid skyblue;
+  border-top: 1px solid skyblue;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
 }
-/* 
+
+input, select{
+  background: transparent;
+  width: 200px;
+  padding: 1em;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  border: none;
+  border-left: 1px solid skyblue;
+  border-top: 1px solid skyblue;
+  border-radius: 5000px;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: gray;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  border: none;
+  font-size: 1rem;
+  color: gray;
+  background-color: skyblue;
+  padding: 0.5rem 0.7rem;
+  border-radius: 15px;
+  font-weight: bold;
+  margin-left: 50px;
+  font-family: Montserrat, sans-serif;
+}
+
 img {
   width: 100%;
-  height: 450px;
-} */
+  height: 600px;
+}
